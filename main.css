@@ -697,6 +697,24 @@ button:focus {
         margin-top: 10px;
     }
 }
+.timeline-logo {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+/* Media Query for mobile screens */
+@media (max-width: 480px) {
+    .timeline-box {
+        display: block;
+    }
+
+    .timeline-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .timeline-text {
+        padding-left: 0;
+    }
+}
 
   
   
