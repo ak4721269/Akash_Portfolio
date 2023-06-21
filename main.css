@@ -643,4 +643,61 @@ button:focus {
     }
 
 }
+#name-social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #my-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .social-icons li {
+    margin: 0 5px;
+  }
+
+  #my-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .timeline-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-logo {
+    flex-shrink: 0;
+}
+
+.timeline-logo img {
+    max-width: 100%;
+}
+
+.timeline-text {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 480px) {
+    .timeline-text {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+}
+
+  
+  
 
