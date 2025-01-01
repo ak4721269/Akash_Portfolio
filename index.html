@@ -598,6 +598,42 @@
     </h1>
     <a href="Akash_BhardwajResume.pdf" download>Download My Resume</a>
 </section>
+             <section id="chatbot">
+        <h2>Chat with Me!</h2>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="userInput" placeholder="Ask me about my resume..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('#sendBtn').click(function() {
+                const userMessage = $('#userInput').val();
+                $('#messages').append(`<div>User: ${userMessage}</div>`);
+                $('#userInput').val('');
+
+                // Call your chatbot API
+                $.ajax({
+                    url: process.env.GOOGLE_API_KEY, // Replace with your API endpoint
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: userMessage }),
+                    success: function(response) {
+                        $('#messages').append(`<div>Bot: ${response.answer}</div>`);
+                    },
+                    error: function() {
+                        $('#messages').append(`<div>Bot: Sorry, I couldn't understand that.</div>`);
+                    }
+                });
+            });
+        });
+    </script>
     
             <section id="contact">
                 <h1 class="section-heading mb50px">
